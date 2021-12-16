@@ -36,6 +36,6 @@ docker-compose up -d --force-recreate
 
 # update last-commit.txt file
 echo $currentLastCommitHash > ./last-commit.txt
-write-host "publish finished"
+echo "publish finished"
 
 fi
