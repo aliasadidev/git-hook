@@ -20,4 +20,4 @@ services:
 
 networks:
   communere-network:
-    name: communere-net
+    name: bridge
