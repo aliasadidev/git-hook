@@ -9,8 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
+// using Microsoft.Extensions.Logging;
+// using Microsoft.OpenApi.Models;
 
 namespace HookApi
 {
@@ -28,10 +28,10 @@ namespace HookApi
 		{
 
 			services.AddControllers();
-			services.AddSwaggerGen(c =>
-			{
-				c.SwaggerDoc("v1", new OpenApiInfo { Title = "HookApi", Version = "v1" });
-			});
+			// services.AddSwaggerGen(c =>
+			// {
+			// 	c.SwaggerDoc("v1", new OpenApiInfo { Title = "HookApi", Version = "v1" });
+			// });
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,8 +42,8 @@ namespace HookApi
 
 			}
 			app.UseDeveloperExceptionPage();
-			app.UseSwagger();
-			app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "HookApi v1"));
+			// app.UseSwagger();
+			// app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "HookApi v1"));
 
 			//app.UseHttpsRedirection();
 
