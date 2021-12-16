@@ -22,7 +22,7 @@ namespace HookApi.Controllers
 		[HttpGet]
 		public ActionResult Get()
 		{
-			return new JsonResult(new { MyNameIs = "Ali2019" });
+			return new JsonResult(new { MyNameIs = "Ali2022" });
 		}
 	}
 }
