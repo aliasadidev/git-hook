@@ -6,7 +6,7 @@
 echo -e $color"checkout branch to feature/pre-commit"
 git checkout feature/pre-commit -f
 
-# removes staged and working directory changes in the server
+# removes staged changes
 git reset --hard
 
 #  pull feature/pre-commit branch #
@@ -20,14 +20,14 @@ echo "latest hash code:$currentLastCommitHash"
 lastCommitHash="$(cat ./last-commit.txt)"
 
 # compare the current commit hash with previous the commit hash
-isUpdate=False
-if [[  $currentLastCommitHash == $lastCommitHash ]]; then isUpdate=True; fi
+isUpdated=False
+if [[  $currentLastCommitHash == $lastCommitHash ]]; then isUpdated=True; fi
 
 # pre-commit branch is updated?
-echo "is updated: $isUpdate"
+echo "is updated: $isUpdated"
 
 
-if [ $isUpdate = False ];
+if [ $isUpdated = False ];
 then
 
 docker-compose config
