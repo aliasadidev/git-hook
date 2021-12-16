@@ -2,3 +2,4 @@ obj/
 bin/
 bash-ci.sh
 
+log.txt
