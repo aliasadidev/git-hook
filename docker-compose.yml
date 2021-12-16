@@ -15,9 +15,3 @@ services:
     #- Kestrel__Certificates__Default__Password=SecretPassword
 
     restart: always
-    networks:
-      - communere-network
-
-networks:
-  communere-network:
-    name: bridge
