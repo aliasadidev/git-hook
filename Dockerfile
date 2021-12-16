@@ -9,7 +9,7 @@ WORKDIR /src
 #COPY packages /root/.nuget/packages for local test
 
 COPY ["src/", "src/"]
-RUN dotnet restore "src/HookApi/HookApi.csproj"
+RUN dotnet restore "src/HookApi/HookApi.csproj" --disable-parallel
 #--disable-parallel
 COPY . .
 
