@@ -20,8 +20,8 @@ echo "latest hash code:$currentLastCommitHash"
 lastCommitHash="$(cat ./last-commit.txt)"
 
 # compare the current commit hash with previous the commit hash
-isUpdate = False
-if [[  $currentLastCommitHash == $lastCommitHash ]]; then isUpdate = True; fi
+isUpdate=False
+if [[  $currentLastCommitHash == $lastCommitHash ]]; then isUpdate=True; fi
 
 # pre-commit branch is updated?
 echo "is updated: $isUpdate"
