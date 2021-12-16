@@ -3,3 +3,4 @@ bin/
 bash-ci.sh
 
 log.txt
+last-commit.txt
