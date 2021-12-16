@@ -27,7 +27,7 @@ if [[  $currentLastCommitHash == $lastCommitHash ]]; then isUpdate=True; fi
 echo "is updated: $isUpdate"
 
 
-if [ $isUpdate = True ];
+if [ $isUpdate = False ];
 then
 
 docker-compose config
