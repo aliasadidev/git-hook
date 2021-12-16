@@ -20,13 +20,14 @@ echo "latest hash code:$currentLastCommitHash"
 lastCommitHash="$(cat ./last-commit.txt)"
 
 # compare the current commit hash with previous the commit hash
-isUpdate =  [[  $currentLastCommitHash == $lastCommitHash ]] && echo true || echo false
+isUpdate = False
+if [[  $currentLastCommitHash == $lastCommitHash ]]; then isUpdate = True; fi
 
 # pre-commit branch is updated?
 echo "is updated: $isUpdate"
 
 
-if [ isUpdate ]
+if [ $isUpdate = True ];
 then
 
 docker-compose config

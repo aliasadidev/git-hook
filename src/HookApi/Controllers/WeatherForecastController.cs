@@ -9,31 +9,20 @@ namespace HookApi.Controllers
 {
 	[ApiController]
 	[Route("api/[controller]")]
-	public class WeatherForecastController : ControllerBase
+	public class AboutController : ControllerBase
 	{
-		private static readonly string[] Summaries = new[]
-		{
-			"Freezing", "Bracing22", "Chilly22", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-		};
 
-		private readonly ILogger<WeatherForecastController> _logger;
+		private readonly ILogger<AboutController> _logger;
 
-		public WeatherForecastController(ILogger<WeatherForecastController> logger)
+		public AboutController(ILogger<AboutController> logger)
 		{
 			_logger = logger;
 		}
 
 		[HttpGet]
-		public IEnumerable<WeatherForecast> Get()
+		public ActionResult Get()
 		{
-			var rng = new Random();
-			return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-			{
-				Date = DateTime.Now.AddDays(index),
-				TemperatureC = rng.Next(-20, 55),
-				Summary = Summaries[rng.Next(Summaries.Length)]
-			})
-			.ToArray();
+			return new JsonResult(new { MyNameIs = "Ali" });
 		}
 	}
 }
