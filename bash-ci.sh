@@ -9,4 +9,4 @@ $WORKER_SERVICE_NAME = '{container id}'
 echo -e $color"checkout branch to feature/pre-commit"
 (git checkout feature/pre-commit -f)
 
-exit
+exitasd
